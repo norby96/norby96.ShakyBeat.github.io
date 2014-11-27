@@ -35,7 +35,7 @@
                     </nav>
                     <p>Para la realización de este proyecto fue necesario usar ARDUINO y PROCESSING, los cuales permitieron colocar parámetros con el fin de reproducir notas musicales de acuerdo al movimiento de la persona.</p>
 
-                    <p>Programación en Arduino></p>
+                    <p><strong>Programación en Arduino</strong></p>
                     <p>
                         //Se incluyen librerias necesarias<br></br>    
                         #include <SoftwareSerial.h><br></br>    
@@ -151,7 +151,7 @@
                         }<br></br>    
                         </p><br></br> 
 
-                        <p>Programación en PROCESSING</p>
+                        <p><strong>Programación en PROCESSING</strong></p>
                         <p>
                             // Importando las librerias necesarias<br></br>
                             import processing.serial.*;<br></br>
@@ -202,17 +202,17 @@
                             port.write('r');<br></br>
                             interval = millis();<br></br>
                             }<br></br>
-                            background(255);<br></br><br></br>
-                            pushMatrix();<br></br><br></br>
-                            translate(200, height / 2);<br></br><br></br>
-                            float[] axis = quat.toAxisAngle();<br></br><br></br>
-                            rotate(axis[0], -axis[1], axis[3], axis[2]);<br></br><br></br>
-                            // Primera varilla<br></br><br></br>
-                            fill(0, 172, 203, 200);<br></br><br></br>
-                            box(10, 10, 200);<br></br><br></br>
-                            popMatrix();<br></br><br></br>
-                            pushMatrix();<br></br><br></br>
-                            translate(400, height / 2);<br></br><br></br>
+                            background(255);<br></br>
+                            pushMatrix();<br></br>
+                            translate(200, height / 2);<br></br>
+                            float[] axis = quat.toAxisAngle();<br></br>
+                            rotate(axis[0], -axis[1], axis[3], axis[2]);<br></br>
+                            // Primera varilla<br></br>
+                            fill(0, 172, 203, 200);<br></br>
+                            box(10, 10, 200);<br></br>
+                            popMatrix();<br></br>
+                            pushMatrix();<br></br>
+                            translate(400, height / 2);<br></br>
                             // Determino el cambio respectivo por medio de los angulos<br></br>
                             float[] axis2 = quat2.toAxisAngle();<br></br>
                             rotate(axis2[0], -axis2[1], axis2[3], axis2[2]);<br></br>
@@ -226,94 +226,94 @@
                             sc6.playNote(70, 500, 2.0);<br></br>
                             } else {<br></br>
                             if (round(q[1]*100.0f)>0) {<br></br>
-                            sc1.playNote(round(q[1]*100.0f), 100, 2.0);<br></br><br></br><br></br>
-                            } else {<br></br><br></br><br></br>
-                            sc1.playNote(-round(q[1]*100.0f), 100, 2.0);<br></br><br></br><br></br>
-                            }<br></br><br></br><br></br>
-                            if (round(q2[1]*100.0f)>0) {<br></br><br></br><br></br>
-                            sc2.playNote(round(q2[1]*100.0f), 100, 2.0);<br></br><br></br><br></br>
-                            } else {<br></br><br></br><br></br>
-                            sc2.playNote(-round(q2[1]*100.0f), 100, 2.0);<br></br><br></br><br></br>
-                            }<br></br><br></br><br></br>
-                            if (round(q[3]*100.0f)>0) {<br></br><br></br><br></br>
-                            sc3.playNote(round(q[3]*100.0f), 100, 2.0);<br></br><br></br><br></br>
-                            } else {<br></br><br></br>
-                            sc3.playNote(-round(q[3]*100.0f), 100, 2.0);<br></br><br></br>
-                            }<br></br><br></br>
-                            if (round(q2[3]*100.0f)>0) {<br></br><br></br>
-                            sc4.playNote(round(q2[3]*100.0f), 100, 2.0);<br></br><br></br>
-                            } else {<br></br><br></br>
-                            sc4.playNote(-round(q2[3]*100.0f), 100, 2.0);<br></br><br></br>
-                            }<br></br><br></br>
-                            if (round(q2[2]*100.0f)>0) {<br></br><br></br>
-                            sc5.playNote(round(q2[2]*100.0f), 100, 2.0);<br></br><br></br>
+                            sc1.playNote(round(q[1]*100.0f), 100, 2.0);<br></br>
+                            } else {<br></br>
+                            sc1.playNote(-round(q[1]*100.0f), 100, 2.0);<br></br>
+                            }<br></br>
+                            if (round(q2[1]*100.0f)>0) {<br></br>
+                            sc2.playNote(round(q2[1]*100.0f), 100, 2.0);<br></br>
+                            } else {<br></br>
+                            sc2.playNote(-round(q2[1]*100.0f), 100, 2.0);<br></br>
+                            }<br></br>
+                            if (round(q[3]*100.0f)>0) {<br></br>
+                            sc3.playNote(round(q[3]*100.0f), 100, 2.0);<br></br>
+                            } else {<br></br>
+                            sc3.playNote(-round(q[3]*100.0f), 100, 2.0);<br></br>
+                            }<br></br>
+                            if (round(q2[3]*100.0f)>0) {<br></br>
+                            sc4.playNote(round(q2[3]*100.0f), 100, 2.0);<br></br>
+                            } else {<br></br>
+                            sc4.playNote(-round(q2[3]*100.0f), 100, 2.0);<br></br>
+                            }<br></br>
+                            if (round(q2[2]*100.0f)>0) {<br></br>
+                            sc5.playNote(round(q2[2]*100.0f), 100, 2.0);<br></br>
                             } else {<br></br>
                             sc5.playNote(-round(q2[2]*100.0f), 100, 2.0);<br></br>
                             }<br></br>
                             if (round(q[2]*100.0f)>0) {<br></br>
                             sc5.playNote(round(q[2]*100.0f), 100, 2.0);<br></br>
                             } else {<br></br>
-                            sc5.playNote(-round(q[2]*100.0f), 100, 2.0);
-                            }
-                            }
-                            if (round(q[1]*100.0f)<0) {
-                            frameRate(2);
-                            } else {
-                            frameRate(5);
-                            }
-                            }
-                            // Modo de obtencion de datos del arduino
-                            void serialEvent(Serial port) {
-                            interval = millis();
-                            while (port.available () > 0) {
-                            int ch = port.read();
-                            print((char)ch);
-                            if (!gotFirstDataByte) {
-                            if (ch == '$') {
-                            gotFirstDataByte = true;
-                            12
-                            } else {
-                            return;
-                            }
-                            }
-                            if (aligned < 4) {
-                            if (serialCount == 0) {
-                            if (ch == '$') aligned++;
-                            else aligned = 0;
-                            } else if (serialCount == 1) {
-                            if (ch == 2) aligned++;
-                            else aligned = 0;
-                            } else if (serialCount == 20) {
-                            if (ch == '\r') aligned++;
-                            else aligned = 0;
-                            } else if (serialCount == 21) {
-                            if (ch == '\n') aligned++;
-                            else aligned = 0;
-                            }
+                            sc5.playNote(-round(q[2]*100.0f), 100, 2.0);<br></br>
+                            }<br></br>
+                            }<br></br>
+                            if (round(q[1]*100.0f)<0) {<br></br>
+                            frameRate(2);<br></br>
+                            } else {<br></br>
+                            frameRate(5);<br></br>
+                            }<br></br>
+                            }<br></br>
+                            // Modo de obtencion de datos del arduino<br></br>
+                            void serialEvent(Serial port) {<br></br>
+                            interval = millis();<br></br>
+                            while (port.available () > 0) {<br></br>
+                            int ch = port.read();<br></br>
+                            print((char)ch);<br></br>
+                            if (!gotFirstDataByte) {<br></br>
+                            if (ch == '$') {<br></br>
+                            gotFirstDataByte = true;<br></br>
+                            12<br></br>
+                            } else {<br></br>
+                            return;<br></br>
+                            }<br></br>
+                            }<br></br>
+                            if (aligned < 4) {<br></br>
+                            if (serialCount == 0) {<br></br>
+                            if (ch == '$') aligned++;<br></br>
+                            else aligned = 0;<br></br>
+                            } else if (serialCount == 1) {<br></br>
+                            if (ch == 2) aligned++;<br></br>
+                            else aligned = 0;<br></br>
+                            } else if (serialCount == 20) {<br></br>
+                            if (ch == '\r') aligned++;<br></br>
+                            else aligned = 0;<br></br>
+                            } else if (serialCount == 21) {<br></br>
+                            if (ch == '\n') aligned++;<br></br>
+                            else aligned = 0;<br></br>
+                            }<br></br>
                             serialCount++;
-                            if (serialCount == 22) serialCount = 0;
-                            } else {
-                            if (serialCount > 0 || ch == '$') {
-                            teapotPacket[serialCount++] = (char)ch;
-                            if (serialCount == 22) {
-                            serialCount = 0;
-                            q[0] = ((teapotPacket[2] << 8) | teapotPacket[3]) / 16384.0f;
-                            q[1] = ((teapotPacket[4] << 8) | teapotPacket[5]) / 16384.0f;
-                            q[2] = ((teapotPacket[6] << 8) | teapotPacket[7]) / 16384.0f;
-                            q[3] = ((teapotPacket[8] << 8) | teapotPacket[9]) / 16384.0f;
-                            for (int i = 0; i < 4; i++) if (q[i] >= 2) q[i] = -4 + q[i];
-                            quat.set(q[0], q[1], q[2], q[3]);
-                            q2[0] = ((teapotPacket[10] << 8) | teapotPacket[11]) / 16384.0f;
-                            q2[1] = ((teapotPacket[12] << 8) | teapotPacket[13]) / 16384.0f;
-                            q2[2] = ((teapotPacket[14] << 8) | teapotPacket[15]) / 16384.0f;
-                            q2[3] = ((teapotPacket[16] << 8) | teapotPacket[17]) / 16384.0f;
-                            for (int i = 0; i < 4; i++) if (q2[i] >= 2) q2[i] = -4 + q2[i];
-                            quat2.set(q2[0], q2[1], q2[2], q2[3]);
-                            }
-                            }
-                            }
-                            }
-                            }
+                            if (serialCount == 22) serialCount = 0;<br></br>
+                            } else {<br></br>
+                            if (serialCount > 0 || ch == '$') {<br></br>
+                            teapotPacket[serialCount++] = (char)ch;<br></br>
+                            if (serialCount == 22) {<br></br>
+                            serialCount = 0;<br></br>
+                            q[0] = ((teapotPacket[2] << 8) | teapotPacket[3]) / 16384.0f;<br></br>
+                            q[1] = ((teapotPacket[4] << 8) | teapotPacket[5]) / 16384.0f;<br></br>
+                            q[2] = ((teapotPacket[6] << 8) | teapotPacket[7]) / 16384.0f;<br></br>
+                            q[3] = ((teapotPacket[8] << 8) | teapotPacket[9]) / 16384.0f;<br></br>
+                            for (int i = 0; i < 4; i++) if (q[i] >= 2) q[i] = -4 + q[i];<br></br>
+                            quat.set(q[0], q[1], q[2], q[3]);<br></br>
+                            q2[0] = ((teapotPacket[10] << 8) | teapotPacket[11]) / 16384.0f;<br></br>
+                            q2[1] = ((teapotPacket[12] << 8) | teapotPacket[13]) / 16384.0f;<br></br>
+                            q2[2] = ((teapotPacket[14] << 8) | teapotPacket[15]) / 16384.0f;<br></br>
+                            q2[3] = ((teapotPacket[16] << 8) | teapotPacket[17]) / 16384.0f;<br></br>
+                            for (int i = 0; i < 4; i++) if (q2[i] >= 2) q2[i] = -4 + q2[i];<br></br>
+                            quat2.set(q2[0], q2[1], q2[2], q2[3]);<br></br>
+                            }<br></br>
+                            }<br></br>
+                            }<br></br>
+                            }<br></br>
+                            }<br></br>
                         </p>
 
 
